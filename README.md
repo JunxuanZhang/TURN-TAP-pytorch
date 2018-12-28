@@ -17,35 +17,20 @@ DenseFlow Features in the Google Drive：[val set](https://drive.google.com/file
 # Setup
 use git to clone this repository
 
-'''
-
-git clone --recursive https://github.com/JunxuanZhang/TURN-TAP-pytorch/
-
-'''
+$ git clone --recursive https://github.com/JunxuanZhang/TURN-TAP-pytorch/
 
 Then create two necessary folders
 
-'''
+$ mkdir features results
 
-mkdir features
-
-mkdir results
-
-'''
+Move the downloaded features to the 'features' folder
 
 # Training and evaluation
 To train and evaluate the TURN model, run the 'main.py' script
 
-'''
-
-python main.py
-
-'''
+$ python main.py
 
 if you want to continue training from the specfic checkpoint, use '--resume' option
 
-'''
+$ python main.py --resume CHECKPOINT_PATH
 
-python main.py --resume CHECKPOINT_PATH
-
-'''
