@@ -3,7 +3,9 @@ This is a pytorch implementation of [TURN TAP: Temporal Unit Regression Network 
 
 # Enviorment
 Pytorch 0.4.0
+
 CUDA 8.0
+
 Python 2.7.6
 
 # References
@@ -14,24 +16,36 @@ DenseFlow Features in the Google Drive：[val set](https://drive.google.com/file
 
 # Setup
 use git to clone this repository
+
 '''
+
 git clone --recursive https://github.com/JunxuanZhang/TURN-TAP-pytorch/
+
 '''
 
 Then create two necessary folders
+
 '''
+
 mkdir features
 
 mkdir results
+
 '''
 
 # Training and evaluation
 To train and evaluate the TURN model, run the 'main.py' script
+
 '''
+
 python main.py
+
 '''
 
 if you want to continue training from the specfic checkpoint, use '--resume' option
+
 '''
+
 python main.py --resume CHECKPOINT_PATH
+
 '''
