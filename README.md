@@ -21,6 +21,7 @@ git clone --recursive https://github.com/JunxuanZhang/TURN-TAP-pytorch/
 Then create two necessary folders
 '''
 mkdir features
+
 mkdir results
 '''
 
