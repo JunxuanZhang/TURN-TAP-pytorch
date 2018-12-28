@@ -243,11 +243,9 @@ def evaluate(val_loader, model, clip_prob, frm_nums, ground_truth):
         total_pr_num += pr_num
 
     tiou_thresholds = np.linspace(0.5, 1.0, 11)
-    # AN_list = [50, 100, 200]
+    AN_list = [50, 100, 200]
     ave_pr_per_video = total_pr_num / video_lst.shape[0]
-    # pcn_lst = [AN / ave_pr_per_video for AN in AN_list]
-    pcn_lst = list(np.arange(1, 101) / 100.0)
-    AN_list = [x * ave_pr_per_video for x in pcn_lst]
+    pcn_lst = [AN / ave_pr_per_video for AN in AN_list]
     matches = np.empty((video_lst.shape[0], len(pcn_lst)))
     recall = np.empty((tiou_thresholds.shape[0], len(pcn_lst)))
     # Iterates over each tiou threshold.
