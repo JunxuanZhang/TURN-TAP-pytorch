@@ -57,4 +57,6 @@ parser.add_argument('--print-freq', '-p', default=20, type=int,
                     metavar='N', help='print frequency (default: 20)')
 parser.add_argument('--eval-freq', '-ef', default=2, type=int,
                     metavar='N', help='evaluation frequency (default: 5)')
+parser.add_argument('-e', '--evaluate', dest='evaluate', action='store_true',
+                    help='evaluate model on validation set')
 
