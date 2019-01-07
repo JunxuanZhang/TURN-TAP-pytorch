@@ -26,7 +26,7 @@ parser.add_argument('--middle_layer_dim', default=1000, type=int, metavar='N',
                     help='the dimension of the middle FC layer (default: 1000)')
 parser.add_argument('--dropout', default=0.5, type=int, metavar='N',
                     help='the dropout ratio')
-parser.add_argument('--lr', '--learning-rate', default=0.05, type=float,
+parser.add_argument('--lr', '--learning-rate', default=0.1, type=float,
                     metavar='LR', help='initial learning rate (default:0.05)')
 parser.add_argument('--lr_steps', default=[40], type=float, nargs="+",
                     metavar='LRSteps', help='epochs to decay learning rate by 10')
@@ -36,7 +36,7 @@ parser.add_argument('--resume', default='', type=str, metavar='PATH',
                     help='path to latest checkpoint (default: none)')
 parser.add_argument('--momentum', default=0.9, type=float, metavar='M',
                     help='momentum')
-parser.add_argument('--weight-decay', '--wd', default=5e-4, type=float,
+parser.add_argument('--weight-decay', '--wd', default=0, type=float,
                     metavar='W', help='weight decay (default: 5e-4)')
 parser.add_argument('--ctx_number', '--nctx', default=4, type=int)
 parser.add_argument('--unit_size', default=16, type=int, metavar='N',
