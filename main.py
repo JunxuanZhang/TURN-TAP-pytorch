@@ -90,6 +90,10 @@ def main():
                         'thumos14_test_groundtruth.csv')
     s = requests.get(ground_truth_url).content
     ground_truth = pd.read_csv(io.StringIO(s.decode('utf-8')), sep=' ')
+    
+    if args.evaluate:
+        evaluate(val_loader, model, clip_prob, frm_nums, ground_truth)
+        return
 
     for epoch in range(args.start_epoch, args.epochs):
         adjust_learning_rate(optimizer, epoch, args.lr_steps)
