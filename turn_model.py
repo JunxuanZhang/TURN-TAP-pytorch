@@ -59,9 +59,9 @@ class TURN(torch.nn.Module):
 
         self.output_layer = nn.Linear(self.middle_layer_dim, self.num_class)
 
-        nn.init.normal(self.fc_layer.weight.data, 0, 0.001)
+        nn.init.normal(self.fc_layer.weight.data, 0, 0.1)
         nn.init.constant(self.fc_layer.bias.data, 0)
-        nn.init.normal(self.output_layer.weight.data, 0, 0.001)
+        nn.init.normal(self.output_layer.weight.data, 0, 0.1)
         nn.init.constant(self.output_layer.bias.data, 0)
 
     def forward(self, inputdata):
